@@ -16,7 +16,8 @@ Route::get('/login',"ViewController@login");
 Route::get('/admin/login',"AdminAuthController@login");
 Route::get('/admin/auth',"AdminAuthController@auth");
 Route::post('/user/auth',"AuthController@auth");
+Route::get('/logout',"AuthController@logout");
 Route::get('/admin/home',"AdminAuthController@admin_home");
 Route::get('/register',"ViewController@register");
 Route::post('/registered',"RegController@insert_register");
-Route::get('/logout',"AuthController@logout");
+

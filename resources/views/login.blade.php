@@ -75,22 +75,6 @@
 					<!-- /logo -->
                 </div>
 
-				<!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
-                    	@if (Session::has('user_name'))
-	                        <li><a href="#">{{Session::get('user_name')}}</a></li>
-	                        <li><a href="#service">Register</a></li>
-						@else
-							<li><a href="#body">Log In</a></li>
-						@endif
-                            <!--                   <li><a href="#portfolio">portfolio</a></li>
-                        <li><a href="#testimonials">Testimonial</a></li>
-                        <li><a href="#price">price</a></li>
-                        <li><a href="#contact">Contact</a></li> -->
-                    </ul>
-                </nav>
-				<!-- /main nav -->
 				
             </div>
         </header>

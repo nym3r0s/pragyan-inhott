@@ -5,6 +5,7 @@
 <!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
     <head>
+
     	<!-- meta character set -->
         <meta charset="utf-8">
 		<!-- Always force latest IE rendering engine or request Chrome Frame -->
@@ -41,6 +42,34 @@
 		<!-- Modernizer Script for old Browsers -->
         <script src="{{ asset('/js/modernizr-2.6.2.min.js') }}"></script>
 		<script>var base_url = "{{ url('/') }}";</script>
+		<!-- Essential jQuery Plugins
+		================================================== -->
+		<!-- Main jQuery -->
+        <script src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
+		<!-- Twitter Bootstrap -->
+        <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+		<!-- Single Page Nav 
+        <script src="{{ asset('/js/jquery.singlePageNav.min.js') }}"></script>
+		-->
+		<!-- jquery.fancybox.pack -->
+        <script src="{{ asset('/js/jquery.fancybox.pack.js') }}"></script>
+		<!-- Owl Carousel -->
+        <script src="{{ asset('/js/owl.carousel.min.js') }}"></script>
+        <!-- jquery easing -->
+        <script src="{{ asset('/js/jquery.easing.min.js') }}"></script>
+        <!-- Fullscreen slider -->
+        <script src="{{ asset('/js/jquery.slitslider.js') }}"></script>
+        <script src="{{ asset('/js/jquery.ba-cond.min.js') }}"></script>
+		<!-- onscroll animation -->
+        <script src="{{ asset('/js/wow.min.js') }}"></script>
+		<!-- Custom Functions -->
+        <script src="{{ asset('/js/main.js') }}"></script>
+        <script type="text/javascript">
+ 		$(document).ready(function() {
+		$(".fancybox").fancybox();
+		});
+		</script> 
+
     </head>
 	
     <body id="body">
@@ -240,41 +269,49 @@ This tournament consists of a splash of every flavour of Pragyan. Events are des
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
 							<div class="service-item">
 								<div class="service-icon">
-									<i class="fa fa-home fa-3x"></i>
+									<a href="{{asset('/pdfs/1.pdf')}}" target="_blank"><i class="fa fa-home fa-3x"></i></a>
 								</div>
 								<h3>Grab To Smash</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<p>Gain access to smash your opponents by grabbing your powers.</p>
 							</div>
 						</div>
 					
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
 							<div class="service-item">
 								<div class="service-icon">
-									<i class="fa fa-tasks fa-3x"></i>
+								<a href="{{asset('/pdfs/2.pdf')}}" target="_blank">
+									<i class="fa fa-tasks fa-3x" onclick="$.fancybox({});"></i></a>
 								</div>
 								<h3>Electrolution</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<p>Work on some of the most cutting-edge technologies in the world of elect
+ronics and
+be amazed at what you are capable of</p>
 							</div>
 						</div>
 					
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
 							<div class="service-item">
 								<div class="service-icon">
-									<i class="fa fa-clock-o fa-3x"></i>
+								<a href="{{asset('/pdfs/3.pdf')}}" target="_blank">
+									<i class="fa fa-clock-o fa-3x"></i></a>
 								</div>
 								<h4>Pragyan Design Challenge</h4>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<p>Unleash your engineering skills, creativity and intuition, and structure your ideas for
+the given problem statement and present it by a drawing/ sketchup/ 3D Modelling  </p>
 							</div>
 						</div>
 					
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
 							<div class="service-item">
 								<div class="service-icon">
-									<i class="fa fa-heart fa-3x"></i>
+								<a href="{{asset('/pdfs/4.pdf')}}" target="_blank">
+									<i class="fa fa-heart fa-3x"></i></a>
 								</div>
 								
 								<h3>Yaconai</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>							
+								<p>The main idea/aim of this Event is to elevate/bring-out some of the existing problems wi
+thin the
+college using Existing Technologies which are feasible at the same time. </p>							
 							</div>
 						</div>
 					</div>
@@ -285,41 +322,50 @@ This tournament consists of a splash of every flavour of Pragyan. Events are des
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
 							<div class="service-item">
 								<div class="service-icon">
-									<i class="fa fa-home fa-3x"></i>
-								</div>
+								<a href="{{asset('/pdfs/5.pdf')}}" target="_blank">	<i class="fa fa-home fa-3x"></i>
+								</a></div>
 								<h3>Bytecode junior</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<p>ByteCode Junior is an online algorithm programming conte
+st. The contest tests your skills in Algorithms and Data
+Structures. </p>
 							</div>
 						</div>
 					
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
 							<div class="service-item">
 								<div class="service-icon">
-									<i class="fa fa-tasks fa-3x"></i>
-								</div>
+								<a href="{{asset('/pdfs/6.pdf')}}" target="_blank">	<i class="fa fa-tasks fa-3x"></i>
+								</a></div>
 								<h3>The Ultimate Manager</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<p>A fun filled, creative and challenging event, where we wil
+l test you on your business acumen,
+creativity, “thinking-outside-the-box” capabilities and g
+eneral awareness. </p>
 							</div>
 						</div>
 					
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
 							<div class="service-item">
 								<div class="service-icon">
-									<i class="fa fa-clock-o fa-3x"></i>
-								</div>
+								<a href="{{asset('/pdfs/7.pdf')}}" target="_blank">	<i class="fa fa-clock-o fa-3x"></i>
+								</a></div>
 								<h3>Water Rocket</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+								<p>Take your first big step to propel yourself into the world of aerodynamics!</p>
 							</div>
 						</div>
 					
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
 							<div class="service-item">
 								<div class="service-icon">
-									<i class="fa fa-heart fa-3x"></i>
+								<a href="{{asset('/pdfs/8.pdf')}}" target="_blank">
+									<i class="fa fa-heart fa-3x"></i></a>
 								</div>
 								
 								<h3>Trollphy</h3>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>							
+								<p> Trollphy event is for those w
+ho want everyone to have a good laugh with humorous memes
+on
+physics/physicists. </p>							
 							</div>
 						</div>
 					</div>
@@ -527,27 +573,9 @@ This tournament consists of a splash of every flavour of Pragyan. Events are des
 			</div>
 		</footer>
 		
-		<!-- Essential jQuery Plugins
-		================================================== -->
-		<!-- Main jQuery -->
-        <script src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
-		<!-- Twitter Bootstrap -->
-        <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-		<!-- Single Page Nav 
-        <script src="{{ asset('/js/jquery.singlePageNav.min.js') }}"></script>
-		-->
-		<!-- jquery.fancybox.pack -->
-        <script src="{{ asset('/js/jquery.fancybox.pack.js') }}"></script>
-		<!-- Owl Carousel -->
-        <script src="{{ asset('/js/owl.carousel.min.js') }}"></script>
-        <!-- jquery easing -->
-        <script src="{{ asset('/js/jquery.easing.min.js') }}"></script>
-        <!-- Fullscreen slider -->
-        <script src="{{ asset('/js/jquery.slitslider.js') }}"></script>
-        <script src="{{ asset('/js/jquery.ba-cond.min.js') }}"></script>
-		<!-- onscroll animation -->
-        <script src="{{ asset('/js/wow.min.js') }}"></script>
-		<!-- Custom Functions -->
-        <script src="{{ asset('/js/main.js') }}"></script>
+		
+       
+
+	
     </body>
 </html>
