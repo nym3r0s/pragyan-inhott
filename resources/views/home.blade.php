@@ -148,7 +148,7 @@
                             <div class="caption-content">
                                 <h2 class="animated fadeInDown">Pragyan 2016</h2>
                                 <span class="animated fadeInDown">Inter Hostel Technical Tournament</span>
-                                <a href="#about" class="btn btn-blue btn-effect">Participate</a>
+                                <!-- <a href="{{ url('/register') }}" class="btn btn-blue btn-effect">Participate</a> -->
                             </div>
                         </div>
 						
@@ -161,7 +161,7 @@
                             <div class="caption-content">
                                 <h2>Pragyan 2016</h2>
                                 <span>Inter Hostel Technical Tournament</span>
-                                <a href="#about" class="btn btn-blue btn-effect">Participate</a>
+                                <!-- <a href="{{ url('/register') }}" class="btn btn-blue btn-effect">Participate</a> -->
                             </div>
                         </div>
 						
@@ -174,7 +174,7 @@
                             <div class="caption-content">
                                 <h2>Pragyan 2016</h2>
                                 <span>Inter Hostel Technical Tournament</span>
-                                <a href="#about" class="btn btn-blue btn-effect">Participate</a>
+                                <!-- <a href="{{ url('/register') }}" class="btn btn-blue btn-effect">Participate</a> -->
                             </div>
                         </div>
 
@@ -467,7 +467,7 @@ physics/physicists. </p>
 			-->
 			<!-- end Testimonial section -->
 			
-			<!-- Social section -->
+			<!-- Social section 
 			<section id="social" class="parallax">
 				<div class="overlay">
 					<div class="container">
@@ -475,7 +475,6 @@ physics/physicists. </p>
 						
 							<div class="sec-title text-center white wow animated fadeInDown">
 								<h2>FOLLOW US</h2>
-								<!-- <p></p> -->
 							</div>
 							
 							<ul class="social-button">
@@ -488,6 +487,7 @@ physics/physicists. </p>
 					</div>
 				</div>
 			</section>
+			-->
 			<!-- end Social section -->
 			
 			<!-- Contact section 
