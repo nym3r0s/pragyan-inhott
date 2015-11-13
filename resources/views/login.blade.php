@@ -114,7 +114,7 @@
 						</div>
 						
 						<div class="col-md-6 col-md-offset-3 contact-form wow animated fadeInLeft">
-							<form action="{{ url('/user/auth/') }}" method="post">
+							<form action="{{ url('/user/auth/') }}" method="POST">
 								<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
 								<div class="input-field">
