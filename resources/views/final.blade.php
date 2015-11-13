@@ -80,7 +80,7 @@
                     <ul id="nav" class="nav navbar-nav">
                     	@if (Session::has('user_name'))
 	                        <li><a href="#">{{Session::get('user_name')}}</a></li>
-	                        <li><a href="#service">Register</a></li>
+	                        <li><a href="{{ url('/logout') }}">Logout</a></li>
 						@else
 						  <li><a href="#body">Log In</a></li>
 
@@ -160,8 +160,9 @@
         <script src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
 		<!-- Twitter Bootstrap -->
         <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-		<!-- Single Page Nav -->
+		<!-- Single Page Nav
         <script src="{{ asset('/js/jquery.singlePageNav.min.js') }}"></script>
+		 -->
 		<!-- jquery.fancybox.pack -->
         <script src="{{ asset('/js/jquery.fancybox.pack.js') }}"></script>
 		<!-- Owl Carousel -->
