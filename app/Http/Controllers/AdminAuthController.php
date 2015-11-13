@@ -11,9 +11,7 @@ class AdminAuthController extends Controller {
 
 	public function login()
 	{
-		if(Session::has('user_name')&&(Session::get('user_type')=='admin'))
-			return Redirect::to('admin/home');
-		else
+		
 			return view('admin_login');
     }
 
@@ -21,8 +19,9 @@ class AdminAuthController extends Controller {
 	{
 			$username=$request->get('username'); 
 			$password=$request->get('password');
-			
-			if($username == "a" && $password == "p")
+			echo $username." ".$password;
+			if($username == "admin" && $password == "pragyan")
+
 				return Redirect::to('admin/home');
 			else
 			{

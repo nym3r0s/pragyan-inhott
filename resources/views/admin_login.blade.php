@@ -78,13 +78,10 @@
 				<!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul id="nav" class="nav navbar-nav">
-                    	@if (Session::has('user_name'))
-	                        <li><a href="#">{{Session::get('user_name')}}</a></li>
-	                        <li><a href="#service">Register</a></li>
-						@else
+                    	
 						  <li><a href="#body"> Admin Log In</a></li>
 
-						@endif
+						
                             <!--                   <li><a href="#portfolio">portfolio</a></li>
                         <li><a href="#testimonials">Testimonial</a></li>
                         <li><a href="#price">price</a></li>
@@ -115,7 +112,7 @@
 						</div>
 						
 						<div class="col-md-6 col-md-offset-3 contact-form wow animated fadeInLeft">
-							<form action="{{ url('/admin/auth/') }}" method="post">
+							<form action="{{ url('/admin/auth/') }}" method="get">
 								<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
 
 								<div class="input-field">

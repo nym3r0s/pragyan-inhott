@@ -84,7 +84,7 @@
 	                        <li><a href="{{ url('/logout') }}">Logout</a></li>
 	                    @else
 	                        <li><a id="loginbtn" href="{{ url('login') }}">Log In</a></li>
-	                    	
+	                    	<li><a id="adminloginbtn" href="{{ url('admin/login') }}">Admin Log In</a></li>
 						@endif
       <!--                   <li><a href="#portfolio">portfolio</a></li>
                         <li><a href="#testimonials">Testimonial</a></li>
