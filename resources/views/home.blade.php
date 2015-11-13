@@ -70,7 +70,7 @@
 					
 					<!-- logo -->
 					<h1 class="navbar-brand">
-						<a href="#body">Pragyan 16</a>
+						<a href="{{url('/')}}">Pragyan 16</a>
 					</h1>
 					<!-- /logo -->
                 </div>
@@ -82,8 +82,8 @@
 	                        <li><a href="#">{{Session::get('user_name')}}</a></li>
 	                        <li><a href="{{ url('/register') }}">Register</a></li>
 	                        <li><a href="{{ url('/logout') }}">Logout</a></li>
-	                    @else
-	                        <li><a id="loginbtn" href="{{ url('login') }}">Log In</a></li>
+	                    @else 
+	                        <li><a id="loginbtn" href="{{ url('/login') }}">Log In</a></li>
 	                    	
 						@endif
       <!--                   <li><a href="#portfolio">portfolio</a></li>
@@ -444,7 +444,7 @@ This tournament consists of a splash of every flavour of Pragyan. Events are des
 			</section>
 			<!-- end Social section -->
 			
-			<!-- Contact section -->
+			<!-- Contact section 
 			<section id="contact" >
 				<div class="container">
 					<div class="row">
@@ -485,11 +485,13 @@ This tournament consists of a splash of every flavour of Pragyan. Events are des
 					</div>
 				</div>
 			</section>
-			<!-- end Contact section -->
+			-->
+			<!-- end Contact section 
 			
 			<section id="google-map">
 				<div id="map-canvas" class="wow animated fadeInUp"></div>
 			</section>
+			-->
 		
 		</main>
 		
@@ -531,8 +533,9 @@ This tournament consists of a splash of every flavour of Pragyan. Events are des
         <script src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
 		<!-- Twitter Bootstrap -->
         <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-		<!-- Single Page Nav -->
+		<!-- Single Page Nav 
         <script src="{{ asset('/js/jquery.singlePageNav.min.js') }}"></script>
+		-->
 		<!-- jquery.fancybox.pack -->
         <script src="{{ asset('/js/jquery.fancybox.pack.js') }}"></script>
 		<!-- Owl Carousel -->

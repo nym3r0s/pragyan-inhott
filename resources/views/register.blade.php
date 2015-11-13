@@ -70,7 +70,7 @@
 					
 					<!-- logo -->
 					<h1 class="navbar-brand">
-						<a href="#body">Pragyan 16</a>
+						<a href="{{url('/')}}">Pragyan 16</a>
 					</h1>
 					<!-- /logo -->
                 </div>
@@ -79,7 +79,7 @@
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul id="nav" class="nav navbar-nav">
                         <li><a href="#body"><?php echo Session::get('user_name') ?></a></li>
-                        <li><a href="#service">Logout</a></li>
+                        <li><a href="{{ url('/logout')}}">Logout</a></li>
       <!--                   <li><a href="#portfolio">portfolio</a></li>
                         <li><a href="#testimonials">Testimonial</a></li>
                         <li><a href="#price">price</a></li>
@@ -238,8 +238,9 @@
         <script src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
 		<!-- Twitter Bootstrap -->
         <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-		<!-- Single Page Nav -->
+		<!-- Single Page Nav 
         <script src="{{ asset('/js/jquery.singlePageNav.min.js') }}"></script>
+		-->
 		<!-- jquery.fancybox.pack -->
         <script src="{{ asset('/js/jquery.fancybox.pack.js') }}"></script>
 		<!-- Owl Carousel -->

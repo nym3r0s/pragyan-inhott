@@ -70,7 +70,7 @@
 					
 					<!-- logo -->
 					<h1 class="navbar-brand">
-						<a href="#body">Pragyan 16</a>
+						<a href="{{url('/')}}">Pragyan 16</a>
 					</h1>
 					<!-- /logo -->
                 </div>
@@ -82,8 +82,7 @@
 	                        <li><a href="#">{{Session::get('user_name')}}</a></li>
 	                        <li><a href="#service">Register</a></li>
 						@else
-						  <li><a href="#body">Log In</a></li>
-
+							<li><a href="#body">Log In</a></li>
 						@endif
                             <!--                   <li><a href="#portfolio">portfolio</a></li>
                         <li><a href="#testimonials">Testimonial</a></li>
@@ -183,8 +182,9 @@
         <script src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
 		<!-- Twitter Bootstrap -->
         <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-		<!-- Single Page Nav -->
+		<!-- Single Page Nav 
         <script src="{{ asset('/js/jquery.singlePageNav.min.js') }}"></script>
+		-->
 		<!-- jquery.fancybox.pack -->
         <script src="{{ asset('/js/jquery.fancybox.pack.js') }}"></script>
 		<!-- Owl Carousel -->

@@ -29,20 +29,43 @@ class RegController extends Controller
 		$waterRocket = Input::has('waterRocket');
 		$trollphy = Input::has('trollphy');
 		
-		DB::table('registrations')->insert(array(
+		$exists = DB::table('registrations')->where('rollno', $rollno)->get();
+		if(count($exists)!=0)
+		{
+			DB::table('registrations')
+            ->where('rollno', $rollno)
+            ->update(array(
+				'rollno'     => $rollno,
+				'name'   => $name,
+				'hostel'       => $hostel,
+				'grabToSmash'     => $grabToSmash,
+				'pragyanDesignChallenge'   => $pragyanDesignChallenge,
+				'yaconai'      => $yaconai,
+				'electrolution'    => $electrolution,
+				'bytecodeJunior'    => $bytecodeJunior,
+				'theUltimateManager'    => $theUltimateManager,
+				'bytecodeJunior'    => $bytecodeJunior,
+				'waterRocket'    => $waterRocket,
+				'trollphy'    => $trollphy));
+		}
+		else
+		{
+			DB::table('registrations')->insert(array(
 
-											'rollno'     => $rollno,
-											'name'   => $name,
-											'hostel'       => $hostel,
-											'grabToSmash'     => $grabToSmash,
-											'pragyanDesignChallenge'   => $pragyanDesignChallenge,
-											'yaconai'      => $yaconai,
-											'electrolution'    => $electrolution,
-											'bytecodeJunior'    => $bytecodeJunior,
-											'theUltimateManager'    => $theUltimateManager,
-											'bytecodeJunior'    => $bytecodeJunior,
-											'waterRocket'    => $waterRocket,
-											'trollphy'    => $trollphy));
+												'rollno'     => $rollno,
+												'name'   => $name,
+												'hostel'       => $hostel,
+												'grabToSmash'     => $grabToSmash,
+												'pragyanDesignChallenge'   => $pragyanDesignChallenge,
+												'yaconai'      => $yaconai,
+												'electrolution'    => $electrolution,
+												'bytecodeJunior'    => $bytecodeJunior,
+												'theUltimateManager'    => $theUltimateManager,
+												'bytecodeJunior'    => $bytecodeJunior,
+												'waterRocket'    => $waterRocket,
+												'trollphy'    => $trollphy));
+			
+		}
 
 		return view('final');
 			
