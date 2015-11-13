@@ -78,9 +78,14 @@
 				<!-- main nav -->
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <ul id="nav" class="nav navbar-nav">
-                        <li><a href="#body"><?php echo Session::get('user_name') ?></a></li>
-                        <li><a href="#service">Logout</a></li>
-      <!--                   <li><a href="#portfolio">portfolio</a></li>
+                    	@if (Session::has('user_name'))
+	                        <li><a href="#">{{Session::get('user_name')}}</a></li>
+	                        <li><a href="#service">Register</a></li>
+						@else
+						  <li><a href="#body">Log In</a></li>
+
+						@endif
+                            <!--                   <li><a href="#portfolio">portfolio</a></li>
                         <li><a href="#testimonials">Testimonial</a></li>
                         <li><a href="#price">price</a></li>
                         <li><a href="#contact">Contact</a></li> -->
@@ -105,94 +110,11 @@
 						
 						<div class="sec-title text-center wow animated fadeInDown">
 							<br><br>
-							<h2>REGISTER</h2>
+							<p>Successfully Registered!</p>
 					
 						</div>
 						
-						<div class="col-md-6 col-md-offset-3 contact-form wow animated fadeInLeft">
-							<form action="{{ url('/registered') }}" method="post">
-								<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
-								<label for="name">Name</label>
-								<div class="input-field" id="name">
-
-									<input type="text" name="name" class="form-control" placeholder="Your Name..." required>
-								</div>
-
-								<div class="form-group">
-								<label for="hostel">Select Hostel</label>
-									<select name="hostel" id="hostel" class="form-control">
-										<option name="Agate">Agate</option>
-										<option name="Coral">Coral</option>
-										<option name="Diamond">Diamond</option>
-										<option name="Jade">Jade</option>
-										<option name="Opal">Opal</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<label for="event">Choose events</label>
-								<div id="event" name="event">
-								<div class="checkbox">
-									<label><input type="checkbox" name="grabToSmash" value="grabToSmash" >Grab to smash</label>
-									</div>
-									<div class="checkbox">
-
-									<label>
-									<input type="checkbox" name="pragyanDesignChallenge" value="pragyanDesignChallenge" >Pragyan design challenge
-									</label>
-									</div>
-									<div class="checkbox">
-									
-									<label>
-									<input type="checkbox" name="yaconai" value="yaconai">Yaconai<br>
-									</label>
-									</div>
-
-									<div class="checkbox">
-									
-									<label>
-									<input type="checkbox" name="electrolution" value="electrolution" >Electrolution<br>
-									</label>
-									</div>
-
-									<div class="checkbox">
-									
-									<label>
-									<input type="checkbox" name="bytecodeJunior" value="bytecodeJunior">Bytecode Junior<br>
-									</label>
-									</div>
-
-									<div class="checkbox">
-									
-									<label>
-									<input type="checkbox" name="theUltimateManager" value="theUltimateManager" >The ultimate manager<br>
-									</label>
-									</div>
-									<div class="checkbox">
-									<label>
-									<input type="checkbox" name="waterRocket" value="waterRocket">Water rocket<br>
-									</label>
-									</div>
-									<div class="checkbox">
-									<label>
-									<input type="checkbox" name="event" value="trollphy">Trollphy<br>
-									</label>
-								</div>
-								</div>
-								</div>
-						       	<center>
-						       	<button type="submit" id="submit" class="btn btn-blue btn-effect">Register</button>
-						       	</center>
-							</form>
-							@if (Session::has('message'))
-							<div class="alert alert-info">
-								<ul>
-										<li>{{ Session::get('message') }}</li>
-								</ul>
-							</div>
-							@endif
-						</div>
 						
-					</div>
 				</div>
 			</section>
 			<!-- end Contact section -->

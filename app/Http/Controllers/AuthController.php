@@ -15,8 +15,8 @@ class AuthController extends Controller
     {
             // debug
             // 
-            Session::put('user_name','111456111');
-            return Redirect::to('register');
+            //Session::put('user_name','111456111');
+            //return Redirect::to('register');
             //Actual code
             $email = $request->get('email');
             $password=$request->get('password');
