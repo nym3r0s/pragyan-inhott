@@ -269,7 +269,7 @@ This tournament consists of a splash of every flavour of Pragyan. Events are des
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
 							<div class="service-item">
 								<div class="service-icon">
-									<a href="{{asset('/pdfs/1.pdf')}}" target="_blank"><i class="fa fa-home fa-3x"></i></a>
+									<a href="{{asset('/pdfs/1.pdf')}}" target="_blank"><i class="fa fa-android fa-3x"></i></a>
 								</div>
 								<h3>Grab To Smash</h3>
 								<p>Gain access to smash your opponents by grabbing your powers.</p>
@@ -280,7 +280,7 @@ This tournament consists of a splash of every flavour of Pragyan. Events are des
 							<div class="service-item">
 								<div class="service-icon">
 								<a href="{{asset('/pdfs/2.pdf')}}" target="_blank">
-									<i class="fa fa-tasks fa-3x" onclick="$.fancybox({});"></i></a>
+									<i class="fa fa-bolt fa-3x" onclick="$.fancybox({});"></i></a>
 								</div>
 								<h3>Electrolution</h3>
 								<p>Work on some of the most cutting-edge technologies in the world of elect
@@ -293,7 +293,7 @@ be amazed at what you are capable of</p>
 							<div class="service-item">
 								<div class="service-icon">
 								<a href="{{asset('/pdfs/3.pdf')}}" target="_blank">
-									<i class="fa fa-clock-o fa-3x"></i></a>
+									<i class="fa fa-cube fa-3x"></i></a>
 								</div>
 								<h4>Pragyan Design Challenge</h4>
 								<p>Unleash your engineering skills, creativity and intuition, and structure your ideas for
@@ -322,7 +322,7 @@ college using Existing Technologies which are feasible at the same time. </p>
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
 							<div class="service-item">
 								<div class="service-icon">
-								<a href="{{asset('/pdfs/5.pdf')}}" target="_blank">	<i class="fa fa-home fa-3x"></i>
+								<a href="{{asset('/pdfs/5.pdf')}}" target="_blank">	<i class="fa fa-code fa-3x"></i>
 								</a></div>
 								<h3>Bytecode junior</h3>
 								<p>ByteCode Junior is an online algorithm programming conte
@@ -334,7 +334,7 @@ Structures. </p>
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
 							<div class="service-item">
 								<div class="service-icon">
-								<a href="{{asset('/pdfs/6.pdf')}}" target="_blank">	<i class="fa fa-tasks fa-3x"></i>
+								<a href="{{asset('/pdfs/6.pdf')}}" target="_blank">	<i class="fa fa-users fa-3x"></i>
 								</a></div>
 								<h3>The Ultimate Manager</h3>
 								<p>A fun filled, creative and challenging event, where we wil
@@ -347,7 +347,7 @@ eneral awareness. </p>
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
 							<div class="service-item">
 								<div class="service-icon">
-								<a href="{{asset('/pdfs/7.pdf')}}" target="_blank">	<i class="fa fa-clock-o fa-3x"></i>
+								<a href="{{asset('/pdfs/7.pdf')}}" target="_blank">	<i class="fa fa-rocket fa-3x"></i>
 								</a></div>
 								<h3>Water Rocket</h3>
 								<p>Take your first big step to propel yourself into the world of aerodynamics!</p>
@@ -358,7 +358,7 @@ eneral awareness. </p>
 							<div class="service-item">
 								<div class="service-icon">
 								<a href="{{asset('/pdfs/8.pdf')}}" target="_blank">
-									<i class="fa fa-heart fa-3x"></i></a>
+									<i class="fa fa-smile-o fa-3x"></i></a>
 								</div>
 								
 								<h3>Trollphy</h3>
