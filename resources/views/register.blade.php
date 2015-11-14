@@ -103,8 +103,8 @@
 				<div class="container">
 					<div class="row">
 						
-						<div class="sec-title text-center wow animated fadeInDown">
-							<br><br>
+						<div class="text-center wow animated fadeInDown">
+							<!-- <br> -->
 							<h2>REGISTER</h2>
 					
 						</div>
@@ -112,11 +112,18 @@
 						<div class="col-md-6 col-md-offset-3 contact-form wow animated fadeInLeft">
 							<form action="{{ url('/registered') }}" method="post">
 								<input type="hidden" name="_token" id="csrf-token" value="{{ Session::token() }}" />
+								
 								<label for="name">Name</label>
 								<div class="input-field" id="name">
-
 									<input type="text" name="name" class="form-control" placeholder="Your Name..." required>
 								</div>
+
+								<label for="name">Mobile Number</label>
+								<div class="input-field" id="mobile">
+
+									<input type="text" name="mobile" class="form-control" pattern="[789][0-9]{9}" placeholder="Your Phone Number..." required>
+								</div>
+
 
 								<div class="form-group">
 								<label for="hostel">Select Hostel</label>
@@ -130,57 +137,59 @@
 								</div>
 								<div class="form-group">
 									<label for="event">Choose events</label>
+								</div>
 								<div id="event" name="event">
-								<div class="checkbox">
-									<label><input type="checkbox" name="grabToSmash" value="grabToSmash" >Grab to smash</label>
-									</div>
-									<div class="checkbox">
+										<div class="checkbox">
+										<label><input type="checkbox" name="grabToSmash" value="grabToSmash" >Grab to smash</label>
+										</div>
 
-									<label>
-									<input type="checkbox" name="pragyanDesignChallenge" value="pragyanDesignChallenge" >Pragyan design challenge
-									</label>
-									</div>
-									<div class="checkbox">
-									
-									<label>
-									<input type="checkbox" name="yaconai" value="yaconai">Yaconai<br>
-									</label>
-									</div>
+										<div class="checkbox">
+										<label>
+										<input type="checkbox" name="pragyanDesignChallenge" value="pragyanDesignChallenge" >Pragyan design challenge
+										</label>
+										</div>
+										
+										<div class="checkbox">
+										<label>
+										<input type="checkbox" name="yaconai" value="yaconai">Yaconai<br>
+										</label>
+										</div>
 
-									<div class="checkbox">
-									
-									<label>
-									<input type="checkbox" name="electrolution" value="electrolution" >Electrolution<br>
-									</label>
-									</div>
+										
+										<div class="checkbox">
+										<label>
+										<input type="checkbox" name="electrolution" value="electrolution" >Electrolution<br>
+										</label>
+										</div>
 
-									<div class="checkbox">
-									
-									<label>
-									<input type="checkbox" name="bytecodeJunior" value="bytecodeJunior">Bytecode Junior<br>
-									</label>
-									</div>
+										
+										<div class="checkbox">
+										<label>
+										<input type="checkbox" name="bytecodeJunior" value="bytecodeJunior">Bytecode Junior<br>
+										</label>
+										</div>
 
-									<div class="checkbox">
-									
-									<label>
-									<input type="checkbox" name="theUltimateManager" value="theUltimateManager" >The ultimate manager<br>
-									</label>
+										
+										<div class="checkbox">
+										<label>
+										<input type="checkbox" name="theUltimateManager" value="theUltimateManager" >The ultimate manager<br>
+										</label>
+										</div>
+										
+										<div class="checkbox">
+										<label>
+										<input type="checkbox" name="waterRocket" value="waterRocket">Water rocket<br>
+										</label>
+										</div>
+										
+										<div class="checkbox">
+										<label>
+										<input type="checkbox" name="event" value="trollphy">Trollphy<br>
+										</label>
+										</div>
 									</div>
-									<div class="checkbox">
-									<label>
-									<input type="checkbox" name="waterRocket" value="waterRocket">Water rocket<br>
-									</label>
-									</div>
-									<div class="checkbox">
-									<label>
-									<input type="checkbox" name="event" value="trollphy">Trollphy<br>
-									</label>
-								</div>
-								</div>
-								</div>
 						       	<center>
-						       	<button type="submit" id="submit" class="btn btn-blue btn-effect">Register</button>
+						       	<button type="submit" id="submit" style="font-size:1.5em"class="btn btn-blue btn-effect">Register</button>
 						       	</center>
 							</form>
 							@if (Session::has('message'))

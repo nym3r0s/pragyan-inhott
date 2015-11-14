@@ -15,6 +15,7 @@ class Registrations extends Migration
         Schema::create('registrations', function (Blueprint $table) {
             $table->string('rollno');
             $table->string('name');
+            $table->string('mobile');
             $table->string('hostel');
             $table->string('grabToSmash');
             $table->string('pragyanDesignChallenge');

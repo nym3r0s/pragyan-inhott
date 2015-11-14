@@ -20,6 +20,7 @@ class RegController extends Controller
 		$rollno = Session::get('user_name');
 		$name = $request->get('name');
 		$hostel = $request->get('hostel');
+		$mobile = $request->get('mobile');
 		$grabToSmash = Input::has('grabToSmash');;
 		$pragyanDesignChallenge = Input::has('pragyanDesignChallenge');
 		$yaconai = Input::has('yaconai');
@@ -37,6 +38,7 @@ class RegController extends Controller
             ->update(array(
 				'rollno'     => $rollno,
 				'name'   => $name,
+				'mobile'     => $mobile,
 				'hostel'       => $hostel,
 				'grabToSmash'     => $grabToSmash,
 				'pragyanDesignChallenge'   => $pragyanDesignChallenge,
@@ -54,6 +56,7 @@ class RegController extends Controller
 
 												'rollno'     => $rollno,
 												'name'   => $name,
+												'mobile'     => $mobile,
 												'hostel'       => $hostel,
 												'grabToSmash'     => $grabToSmash,
 												'pragyanDesignChallenge'   => $pragyanDesignChallenge,
