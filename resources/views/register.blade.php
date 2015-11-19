@@ -184,7 +184,7 @@
 										
 										<div class="checkbox">
 										<label>
-										<input type="checkbox" name="event" value="trollphy">Trollphy<br>
+										<input type="checkbox" name="trollphy" value="trollphy">Trollphy<br>
 										</label>
 										</div>
 									</div>
