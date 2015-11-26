@@ -87,20 +87,20 @@ $(document).ready(function(){
 	/*	Menu item highlighting
 	/* ========================================================================= */
 
-	jQuery('#nav').singlePageNav({
-		offset: jQuery('#nav').outerHeight(),
-		filter: ':not(.external)',
-		speed: 2000,
-		currentClass: 'current',
-		easing: 'easeInOutExpo',
-		updateHash: true,
-		beforeStart: function() {
-			console.log('begin scrolling');
-		},
-		onComplete: function() {
-			console.log('done scrolling');
-		}
-	});
+	// jQuery('#nav').singlePageNav({
+	// 	offset: jQuery('#nav').outerHeight(),
+	// 	filter: ':not(.external)',
+	// 	speed: 2000,
+	// 	currentClass: 'current',
+	// 	easing: 'easeInOutExpo',
+	// 	updateHash: true,
+	// 	beforeStart: function() {
+	// 		console.log('begin scrolling');
+	// 	},
+	// 	onComplete: function() {
+	// 		console.log('done scrolling');
+	// 	}
+	// });
 	
     $(window).scroll(function () {
         if ($(window).scrollTop() > 400) {
@@ -169,6 +169,27 @@ $(document).ready(function(){
 		}
 	});
 	
+
+
+	// Getting the stuff;
+	// 
+	$.ajaxSetup({
+				headers: { 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content') }
+			});
+
+
+	$.ajax({
+		method: "GET",
+		url: "/points",
+	}).done(function( msg ) {
+		console.log(msg);
+		console.log("adding table");
+		var map = {
+			"Hostel" : "hostel",
+			"Points" : "points"
+		};
+		tGen($("#points"),JSON.stringify(msg),map);
+	})
 });
 
 

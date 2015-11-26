@@ -21,3 +21,4 @@ Route::get('/admin/home',"AdminAuthController@admin_home");
 Route::get('/register',"ViewController@register");
 Route::post('/registered',"RegController@insert_register");
 
+Route::get('/points',"ViewController@getPoints");

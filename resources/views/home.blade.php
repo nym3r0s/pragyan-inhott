@@ -15,7 +15,7 @@
         <meta name="description" content="Pragyan 2016">
         <meta name="keywords" content="Pragyan, Delta Delta Force">
         <meta name="author" content="Delta Force">
-		
+		<meta name="_token" content="{{ csrf_token() }}"/>
 		<!-- Mobile Specific Meta -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -38,7 +38,7 @@
 		<!-- Main Stylesheet -->
         <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
 
-        <link rel="stylesheet" href="{{ asset('/css/scedule.css') }}">
+        <link rel="stylesheet" href="{{ asset('/css/schedule.css') }}">
         
 		<!-- Modernizer Script for old Browsers -->
         <script src="{{ asset('/js/modernizr-2.6.2.min.js') }}"></script>
@@ -49,6 +49,7 @@
         <script src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
 		<!-- Twitter Bootstrap -->
         <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('/js/t-gen.js') }}"></script>
         <script type="text/javascript">
 		    $(document).ready(function()
 		    {
@@ -81,13 +82,13 @@
 		<!-- onscroll animation -->
         <script src="{{ asset('/js/wow.min.js') }}"></script>
 		<!-- Custom Functions -->
-        <script src="{{ asset('/js/main.js') }}"></script>
         <script type="text/javascript">
  		$(document).ready(function() {
 		$(".fancybox").fancybox();
 		});
 		</script>
 		
+        <script src="{{ asset('/js/main.js') }}"></script>
     </head>
 	
 <body id="body">
@@ -484,9 +485,33 @@ physics/physicists. </p>
               <div class="modal-body">
                 <form id="score_form" class="form-horizontal" method="POST" action="{{ url('/scores') }}">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <label>First</label> : <input type="text" name="first" id="first"/><br/>
-                    <label>Second</label>: <input type="text" name="second" id="second"/><br/>
-                    <label>Third</label> : <input type="text" name="third" id="third"/><br/>
+                    <label>First</label> : 
+	                    <select name="first" id="first" class="form-control">
+	                    	<option value="" selected></option>	
+	                    	<option value="Agate">Agate</option>	
+	                    	<option value="Coral">Coral</option>	
+	                    	<option value="Diamond">Diamond</option>	
+	                    	<option value="Jade">Jade</option>	
+	                    	<option value="Opal">Opal</option>	
+	                    </select><br/>
+                    <label>Second</label>: 
+	                    <select name="second" id="second" class="form-control">
+	                    	<option value="" selected></option>	
+	                    	<option value="Agate">Agate</option>	
+	                    	<option value="Coral">Coral</option>	
+	                    	<option value="Diamond">Diamond</option>	
+	                    	<option value="Jade">Jade</option>	
+	                    	<option value="Opal">Opal</option>	
+	                    </select><br/>
+                    <label>Third</label> : 
+	                    <select name="third" id="third" class="form-control">
+	                    	<option value="" selected></option>	
+	                    	<option value="Agate">Agate</option>	
+	                    	<option value="Coral">Coral</option>	
+	                    	<option value="Diamond">Diamond</option>	
+	                    	<option value="Jade">Jade</option>	
+	                    	<option value="Opal">Opal</option>	
+	                    </select><br/>
                     <input type="hidden" id="score_id" name="id" value="" />
                 </form>
               </div>
@@ -510,7 +535,7 @@ physics/physicists. </p>
         <tbody>
           <tr>
             <td>Grab To Smash</td>
-            <td id="fisrt1">{{ $scores[0]->first }}</td>
+            <td id="first1">{{ $scores[0]->first }}</td>
             <td id="second1">{{ $scores[0]->second }}</td>
             <td id="third1">{{ $scores[0]->third }}</td>
             <td>
@@ -523,7 +548,7 @@ physics/physicists. </p>
           </tr>
           <tr>
             <td>Electrolution</td>
-            <td id="fisrt2">{{ $scores[1]->first }}</td>
+            <td id="first2">{{ $scores[1]->first }}</td>
             <td id="second2">{{ $scores[1]->second }}</td>
             <td id="third2">{{ $scores[1]->third }}</td>
             <td>
@@ -610,174 +635,19 @@ physics/physicists. </p>
     </div>
 					</div>
 				</div>
-			</section>
-			<!-- end Service section -->
-			
-			<!-- portfolio section -->
-		<!-- 	<section id="portfolio">
-				<div class="container">
-					<div class="row">
-					
-						<div class="sec-title text-center wow animated fadeInDown">
-							<h2>FEATURED PROJECTS</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						</div>
-						
 
-						<ul class="project-wrapper wow animated fadeInUp">
-							<li class="portfolio-item">
-								<img src="img/portfolio/item.jpg" class="img-responsive" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat">
-								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
-								</figcaption>
-								<ul class="external">
-									<li><a class="fancybox" title="Araund The world" data-fancybox-group="works" href="img/portfolio/item.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
-								</ul>
-							</li>
-							
-							<li class="portfolio-item">
-								<img src="img/portfolio/item2.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
-								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
-								</figcaption>
-								<ul class="external">
-									<li><a class="fancybox" title="Wall street" href="img/slider/banner.jpg" data-fancybox-group="works" ><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
-								</ul>
-							</li>
-							
-							<li class="portfolio-item">
-								<img src="img/portfolio/item3.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
-								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
-								</figcaption>
-								<ul class="external">
-									<li><a class="fancybox" title="Behind The world" data-fancybox-group="works" href="img/portfolio/item3.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
-								</ul>
-							</li>
-							
-							<li class="portfolio-item">
-								<img src="img/portfolio/item4.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry.">
-								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
-								</figcaption>
-								<ul class="external">
-									<li><a class="fancybox" title="Wall street 4" data-fancybox-group="works" href="img/portfolio/item4.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
-								</ul>
-							</li>
-							
-							<li class="portfolio-item">
-								<img src="img/portfolio/item5.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
-								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
-								</figcaption>
-								<ul class="external">
-									<li><a class="fancybox" title="Wall street 5" data-fancybox-group="works" href="img/portfolio/item5.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
-								</ul>
-							</li>
-							
-							<li class="portfolio-item">
-								<img src="img/portfolio/item6.jpg" class="img-responsive" alt="Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. ">
-								<figcaption class="mask">
-									<h3>Wall street</h3>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting ndustry. </p>
-								</figcaption>
-								<ul class="external">
-									<li><a class="fancybox" title="Wall street 6" data-fancybox-group="works" href="img/portfolio/item6.jpg"><i class="fa fa-search"></i></a></li>
-									<li><a href=""><i class="fa fa-link"></i></a></li>
-								</ul>
-							</li>
-						</ul>
-						
-					</div>
-				</div>
-			</section>
-		 -->	<!-- end portfolio section -->
+	<center><h1>Points Table</h1></center>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<div class="table-responsive" id="points">
+			</div>
+		</div>
+	</div>
+
+	</section>
+			<!-- end Service section -->
+		
 			
-			<!-- Testimonial section 
-			-->
-			<!-- end Testimonial section -->
-			
-			<!-- Social section 
-			<section id="social" class="parallax">
-				<div class="overlay">
-					<div class="container">
-						<div class="row">
-						
-							<div class="sec-title text-center white wow animated fadeInDown">
-								<h2>FOLLOW US</h2>
-							</div>
-							
-							<ul class="social-button">
-								<li class="wow animated zoomIn"><a href="#"><i class="fa fa-thumbs-up fa-2x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.3s"><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
-								<li class="wow animated zoomIn" data-wow-delay="0.6s"><a href="#"><i class="fa fa-dribbble fa-2x"></i></a></li>							
-							</ul>
-							
-						</div>
-					</div>
-				</div>
-			</section>
-			-->
-			<!-- end Social section -->
-			
-			<!-- Contact section 
-			<section id="contact" >
-				<div class="container">
-					<div class="row">
-						
-						<div class="sec-title text-center wow animated fadeInDown">
-							<h2>Contact</h2>
-							<p>Leave a Message</p>
-						</div>
-						
-						
-						<div class="col-md-7 contact-form wow animated fadeInLeft">
-							<form action="#" method="post">
-								<div class="input-field">
-									<input type="text" name="name" class="form-control" placeholder="Your Name...">
-								</div>
-								<div class="input-field">
-									<input type="email" name="email" class="form-control" placeholder="Your Email...">
-								</div>
-								<div class="input-field">
-									<input type="text" name="subject" class="form-control" placeholder="Subject...">
-								</div>
-								<div class="input-field">
-									<textarea name="message" class="form-control" placeholder="Messages..."></textarea>
-								</div>
-						       	<button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
-							</form>
-						</div>
-						
-						<div class="col-md-5 wow animated fadeInRight">
-							<address class="contact-details">
-								<h3>Contact Us</h3>						
-								<p><i class="fa fa-pencil"></i>Phoenix Inc.<span>PO Box 345678</span> <span>Little Lonsdale St, Melbourne </span><span>Australia</span></p><br>
-								<p><i class="fa fa-phone"></i>Phone: (415) 124-5678 </p>
-								<p><i class="fa fa-envelope"></i>website@yourname.com</p>
-							</address>
-						</div>
-			
-					</div>
-				</div>
-			</section>
-			-->
-			<!-- end Contact section 
-			
-			<section id="google-map">
-				<div id="map-canvas" class="wow animated fadeInUp"></div>
-			</section>
-			-->
 		
 		</main>
 		
@@ -815,7 +685,5 @@ physics/physicists. </p>
 		
 		
        
-
-	
     </body>
 </html>
