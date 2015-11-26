@@ -180,10 +180,10 @@ $(document).ready(function(){
 
 	$.ajax({
 		method: "GET",
-		url: "/points",
+		url: base_url+"/points",
 	}).done(function( msg ) {
-		console.log(msg);
-		console.log("adding table");
+		// console.log(msg);
+		// console.log("adding table");
 		var map = {
 			"Hostel" : "hostel",
 			"Points" : "points"
