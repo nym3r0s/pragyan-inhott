@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\ScoreBoard;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 
@@ -14,7 +14,15 @@ class ViewController extends Controller
 {
     public function index()
     {
-        return view("home");
+        $scores = ScoreBoard::all();
+        return view("home", compact('scores'));
+    }
+    
+    public function scores(Request $request)
+    {
+        $scores = ScoreBoard::findOrFail($request->id);
+        $scores->update($request->all());
+        return redirect('/');
     }
 
     public function login()

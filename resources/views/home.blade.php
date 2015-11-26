@@ -23,7 +23,6 @@
 		================================================== -->
 		
 		<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'> -->
-		
 		<!-- Fontawesome Icon font -->
         <link rel="stylesheet" href="{{ asset('/css/font-awesome.min.css') }}">
 		<!-- bootstrap.min -->
@@ -39,6 +38,8 @@
 		<!-- Main Stylesheet -->
         <link rel="stylesheet" href="{{ asset('/css/main.css') }}">
 
+        <link rel="stylesheet" href="{{ asset('/css/scedule.css') }}">
+        
 		<!-- Modernizer Script for old Browsers -->
         <script src="{{ asset('/js/modernizr-2.6.2.min.js') }}"></script>
 		<script>var base_url = "{{ url('/') }}";</script>
@@ -48,6 +49,23 @@
         <script src="{{ asset('/js/jquery-1.11.1.min.js') }}"></script>
 		<!-- Twitter Bootstrap -->
         <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
+        <script type="text/javascript">
+		    $(document).ready(function()
+		    {
+		        $(".board").click(function()
+		        {
+		            var x = $(this).data('id');
+
+		            $("#myModal").modal('show');
+		            $("#score_id").val(x);
+		            $("#save").click(function()
+		            {
+		            	   $("#score_form").submit();
+		            });
+		        });
+		    });
+		  </script>
+
 		<!-- Single Page Nav 
         <script src="{{ asset('/js/jquery.singlePageNav.min.js') }}"></script>
 		-->
@@ -68,12 +86,11 @@
  		$(document).ready(function() {
 		$(".fancybox").fancybox();
 		});
-		</script> 
-
+		</script>
+		
     </head>
 	
-    <body id="body">
-
+<body id="body">
 		<!-- preloader -->
 		<div id="preloader">
             <div class="loder-box">
@@ -228,7 +245,7 @@
 									
 										<span></span>
 										<p style="font-size:1.2em"> First year into college. Boundless enthusiasm and passion to discover. A tournament that gives this enthusiasm a release and a platform for the technical inquisitiveness in you.
-Pragyan'16 presents the Inter Hostel Tournament 2015. A series of contests exclusively for first years.
+Pragyan 16 presents the Inter Hostel Tournament 2015. A series of contests exclusively for first years.
 This tournament consists of a splash of every flavour of Pragyan. Events are designed to cater to every interest and give the newest members of NIT Trichy a glimpse of Pragyan will hold for them.</p>
 									
 									</div>
@@ -368,6 +385,226 @@ on
 physics/physicists. </p>							
 							</div>
 						</div>
+					</div>
+
+					<div class="row" style="margin-top: 50px">
+						<h2 style="padding-top: 20px; padding-bottom: 0px; text-align: center"> SCHEDULE</h2>
+						<div class="col-md-6">
+							<h4 style="padding: 10px; padding-bottom: 0px; text-align: center">Day 1</h4>
+							<h4 style="padding-bottom: 10px; text-align: center">(Date: 28-11-2015)</h4>
+					 		<div class="table-responsive">
+							<table  id="my-table" class="table table-striped" >
+							  <thead>
+							    <tr>
+							      <th>EVENT</th>
+							      <th>TIME</th>
+							      <th>VENUE</th>
+							    </tr>
+							  </thead>
+							  <tbody>
+							    <tr>
+							      <td>The Ultimate Manager</td>
+							      <td>10 am to 3 pm</td>
+							      <td>A2</td>
+							    </tr>
+							    <tr>
+							      <td>Electrolution</td>
+							      <td>10 am to 4 pm</td>
+							      <td>LHC / Orion</td>
+							    </tr>
+							    <tr>
+							      <td>PDC</td>
+							      <td>2 pm to 5 pm</td>
+							      <td>A11</td>
+							    </tr>
+							    <tr>
+							      <td>Bytecode Junior</td>
+							      <td>5:30 pm to 8:30 pm</td>
+							      <td>-</td>
+							    </tr>
+							  </tbody>
+							</table>
+							</div>
+						</div>
+						<div class="col-md-6">
+						<h4 style="padding: 10px; padding-bottom: 0px; text-align: center">Day 2</h4>
+						<h4 style="padding-bottom: 10px; text-align: center">(Date: 29-11-2015)</h4>
+						<div class="table-responsive">
+							<table  id="my-table" class="table table-striped" >
+						  <thead>
+						    <tr>
+						      <th>EVENT</th>
+						      <th>TIME</th>
+						      <th>VENUE</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						    	<td>Grab to Smash</td>
+						      <td>10 am to 4 pm</td>
+						      <td>Barn Hall</td>
+						    </tr>
+						    <tr>
+						      <td>Yocanai</td>
+						      <td>10 am to 1 pm</td>
+						      <td>A11</td>
+						    </tr>
+						    <tr>
+						      <td>Water Rocket</td>
+						      <td>9:30 to 12:30 pm</td>
+						      <td>CEESAT Ground</td>
+						    </tr>
+						    <tr>
+						      <td>TrollPhy (2nd round)</td>
+						      <td>2 pm to 4 pm</td>
+						      <td>A11</td>
+						    </tr>
+						    <tr>
+						    	<td>Validiction</td>
+						    	<td>5:30 pm</td>
+						    	<td>EEE Audi</td>
+						    </tr>
+						    </tbody>
+						</table>
+						</div>
+						</div>
+					</div>
+					<div class="row" style="margin-top:50px">
+					<h2 style="padding-top: 20px; padding-bottom: 0px; text-align: center">Score board</h2>
+						<div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <form id="score_form" class="form-horizontal" method="POST" action="{{ url('/scores') }}">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <label>First</label> : <input type="text" name="first" id="first"/><br/>
+                    <label>Second</label>: <input type="text" name="second" id="second"/><br/>
+                    <label>Third</label> : <input type="text" name="third" id="third"/><br/>
+                    <input type="hidden" id="score_id" name="id" value="" />
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="save" data-dismiss="modal">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <th>Event</th>
+          <th>First Place</th>
+          <th>Second Place</th>
+          <th>Third Place</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Grab To Smash</td>
+            <td id="fisrt1">{{ $scores[0]->first }}</td>
+            <td id="second1">{{ $scores[0]->second }}</td>
+            <td id="third1">{{ $scores[0]->third }}</td>
+            <td>
+            <?php 
+            if(Session::has('user_name')) 
+              echo '<button data-id="1" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
+              
+              ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Electrolution</td>
+            <td id="fisrt2">{{ $scores[1]->first }}</td>
+            <td id="second2">{{ $scores[1]->second }}</td>
+            <td id="third2">{{ $scores[1]->third }}</td>
+            <td>
+            <?php 
+            if(Session::has('user_name')) 
+              echo '<button data-id="2" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
+              ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Pragyan Design Challenge</td>
+            <td id="first3">{{ $scores[2]->first }}</td>
+            <td id="second3">{{ $scores[2]->second }}</td>
+            <td id="third3">{{ $scores[2]->third }}</td>
+            <td>
+            <?php 
+            if(Session::has('user_name')) 
+              echo '<button data-id="3" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
+              ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Yaconai</td>
+            <td id="first4">{{ $scores[3]->first }}</td>
+            <td id="second4">{{ $scores[3]->second }}</td>
+            <td id="third4">{{ $scores[3]->third }}</td>
+            <td>
+            <?php 
+            if(Session::has('user_name')) 
+              echo '<button data-id="4" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
+              ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Bytecode junior</td>
+            <td id="first5">{{ $scores[4]->first }}</td>
+            <td id="second5">{{ $scores[4]->second }}</td>
+            <td id="third5">{{ $scores[4]->third }}</td>
+            <td>
+            <?php 
+            if(Session::has('user_name')) 
+              echo '<button data-id="5" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
+          ?>
+            </td>
+          </tr>
+          <tr>
+            <td>The Ultimate Manager</td>
+            <td id="first6">{{ $scores[5]->first }}</td>
+            <td id="second6">{{ $scores[5]->second }}</td>
+            <td id="third6">{{ $scores[5]->third }}</td>
+            <td>
+            <?php 
+            if(Session::has('user_name')) 
+              echo '<button data-id="6" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
+              ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Water Rocket</td>
+            <td id="first7">{{ $scores[6]->first }}</td>
+            <td id="second7">{{ $scores[6]->second }}</td>
+            <td id="third7">{{ $scores[6]->third }}</td>
+            <td>
+            <?php 
+            if(Session::has('user_name')) 
+              echo '<button data-id="7" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
+              ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Trollphy</td>
+            <td id="first8">{{ $scores[7]->first }}</td>
+            <td id="second8">{{ $scores[7]->second }}</td>
+            <td id="third8">{{ $scores[7]->third }}</td>
+            <td>
+            <?php 
+            if(Session::has('user_name')) 
+              echo '<button data-id="8" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
+              ?>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 					</div>
 				</div>
 			</section>
