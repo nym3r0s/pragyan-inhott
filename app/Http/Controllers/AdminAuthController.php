@@ -21,8 +21,9 @@ class AdminAuthController extends Controller {
 			$password=$request->get('password');
 			echo $username." ".$password;
 			if($username == "admin" && $password == "pragyan")
-
+			{
 				return Redirect::to('admin/home');
+			}
 			else
 			{
 				return Redirect::to('admin/login')->with('message', 'Incorrect Username or Password');

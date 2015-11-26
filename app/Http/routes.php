@@ -10,7 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-
+Route::post('/scores','ViewController@scores');
 Route::get('/',"ViewController@index");
 Route::get('/login',"ViewController@login");
 Route::get('/admin/login',"AdminAuthController@login");
