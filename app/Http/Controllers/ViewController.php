@@ -20,8 +20,12 @@ class ViewController extends Controller
     
     public function scores(Request $request)
     {
-        $scores = ScoreBoard::findOrFail($request->id);
-        $scores->update($request->all());
+        if(Session::has('admin_login'))
+        {
+            $scores = ScoreBoard::findOrFail($request->id);
+            $scores->update($request->all());    
+        }
+        
         return redirect('/');
     }
 

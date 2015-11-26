@@ -128,6 +128,9 @@
 	                        <li><a href="#">{{Session::get('user_name')}}</a></li>
 	                        <li><a href="{{ url('/register') }}">Register</a></li>
 	                        <li><a href="{{ url('/logout') }}">Logout</a></li>
+	                    @elseif (Session::has('admin_login'))
+	                    	<li><a href="{{ url('/admin/home') }}">Admin Home</a></li>
+	                    	<li><a href="{{ url('/logout') }}">Logout</a></li>
 	                    @else
 	                        <li><a id="loginbtn" href="{{ url('login') }}">Log In</a></li>
 	                    	<li><a id="adminloginbtn" href="{{ url('admin/login') }}">Admin Log In</a></li>
@@ -512,7 +515,7 @@ physics/physicists. </p>
             <td id="third1">{{ $scores[0]->third }}</td>
             <td>
             <?php 
-            if(Session::has('user_name')) 
+            if(Session::has('admin_login')) 
               echo '<button data-id="1" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
               
               ?>
@@ -525,7 +528,7 @@ physics/physicists. </p>
             <td id="third2">{{ $scores[1]->third }}</td>
             <td>
             <?php 
-            if(Session::has('user_name')) 
+            if(Session::has('admin_login')) 
               echo '<button data-id="2" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
               ?>
             </td>
@@ -537,7 +540,7 @@ physics/physicists. </p>
             <td id="third3">{{ $scores[2]->third }}</td>
             <td>
             <?php 
-            if(Session::has('user_name')) 
+            if(Session::has('admin_login')) 
               echo '<button data-id="3" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
               ?>
             </td>
@@ -549,7 +552,7 @@ physics/physicists. </p>
             <td id="third4">{{ $scores[3]->third }}</td>
             <td>
             <?php 
-            if(Session::has('user_name')) 
+            if(Session::has('admin_login')) 
               echo '<button data-id="4" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
               ?>
             </td>
@@ -561,7 +564,7 @@ physics/physicists. </p>
             <td id="third5">{{ $scores[4]->third }}</td>
             <td>
             <?php 
-            if(Session::has('user_name')) 
+            if(Session::has('admin_login')) 
               echo '<button data-id="5" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
           ?>
             </td>
@@ -573,7 +576,7 @@ physics/physicists. </p>
             <td id="third6">{{ $scores[5]->third }}</td>
             <td>
             <?php 
-            if(Session::has('user_name')) 
+            if(Session::has('admin_login')) 
               echo '<button data-id="6" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
               ?>
             </td>
@@ -585,7 +588,7 @@ physics/physicists. </p>
             <td id="third7">{{ $scores[6]->third }}</td>
             <td>
             <?php 
-            if(Session::has('user_name')) 
+            if(Session::has('admin_login')) 
               echo '<button data-id="7" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
               ?>
             </td>
@@ -597,7 +600,7 @@ physics/physicists. </p>
             <td id="third8">{{ $scores[7]->third }}</td>
             <td>
             <?php 
-            if(Session::has('user_name')) 
+            if(Session::has('admin_login')) 
               echo '<button data-id="8" class="board btn btn-xs btn-warning"><span class="glyphicon glyphicon-pencil"></span> Edit</button>';
               ?>
             </td>

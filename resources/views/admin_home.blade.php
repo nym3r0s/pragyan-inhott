@@ -78,7 +78,7 @@
 					
 					<!-- logo -->
 					<h1 class="navbar-brand">
-						<a href="#body">Pragyan 16</a>
+						<a href="{{ action("ViewController@index") }}">Pragyan 16</a>
 					</h1>
 					<!-- /logo -->
 				</div>

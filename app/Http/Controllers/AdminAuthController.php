@@ -22,6 +22,7 @@ class AdminAuthController extends Controller {
 			echo $username." ".$password;
 			if($username == "admin" && $password == "pragyan")
 			{
+				Session::put('admin_login','true');
 				return Redirect::to('admin/home');
 			}
 			else
