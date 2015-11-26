@@ -90,7 +90,8 @@
 		<main class="site-content" role="main">
 			
 			<label for="GrabToSmash">GRAB TO SMASH</label>
-			<table class="table table-hover table-striped" id="GrabToSmash" >
+			<a href="#" class="export">Download grab to smash</a>
+			<div id="dvData"><table class="table table-hover table-striped" id="GrabToSmash" >
 				<thead>
 					<tr>
 						<th>roll no</th>
@@ -114,9 +115,11 @@
 					@endforeach 
 					
 				</tbody>
-			</table>
+			</table></div>
 
 			<label for="PragyanDesignChallenge">PRAGYAN DESIGN CHALLENGE</label>
+			<a href="#" class="export2">Download pdc</a>
+			<div id="dvData2">
 			<table class="table table-bordered table-hover table-striped" id="PragyanDesignChallenge">
 				<thead>
 					<tr>
@@ -141,9 +144,11 @@
 
 					
 				</tbody>
-			</table>
+			</table></div>
 
 			<label for="Yaconai"> YACONAI </label>
+			<a href="#" class="export3">Download yaco</a>
+			<div id="dvData3">
 			<table class="table table-bordered table-hover table-striped" id="Yaconai">
 				<thead>
 					<tr>
@@ -167,9 +172,11 @@
 					@endforeach 
 					
 				</tbody>
-			</table>
+			</table></div>
 
 			<label for="Electrolution"></label>
+			<a href="#" class="export4">Download elect</a>
+			<div id="dvData4">
 			<table class="table table-hover table-striped" id="Electrolution">
 				<thead>
 					<tr>
@@ -193,9 +200,11 @@
 					@endforeach 
 					
 				</tbody>
-			</table>
+			</table></div>
 
 			<label for="BytecodeJunior">BYTECODE JUNIOR</label>
+			<a href="#" class="export5">Download bytecode</a>
+			<div id="dvData5">
 			<table class="table table-bordered table-hover table-striped" id="BytecodeJunior">
 				<thead>
 					<tr>
@@ -219,9 +228,11 @@
 					@endforeach 
 					
 				</tbody>
-			</table>
+			</table></div>
 
 			<label for="TheUltimateManager">THE ULTIMATE MANAGER</label>
+			<a href="#" class="export6">Download TUM</a>
+			<div id="dvData6">
 			<table class="table table-bordered table-hover table-striped" id="TheUltimateManager">
 				<thead>
 					<tr>
@@ -245,9 +256,11 @@
 					@endforeach 
 					
 				</tbody>
-			</table>
+			</table></div>
 
 			<label for="WaterRocket"> WATER ROCKET</label>
+			<a href="#" class="export7">Download waterrocket</a>
+			<div id="dvData7">
 			<table class="table table-bordered table-hover table-striped" id="WaterRocket">
 				<thead>
 					<tr>
@@ -271,9 +284,11 @@
 					@endforeach 
 					
 				</tbody>
-			</table>
+			</table></div>
 
 			<label for="Trollphy"> TROLLPHY </label>
+			<a href="#" class="export8">Download Trollphy</a>
+			<div id="dvData8">
 			<table class="table table-bordered table-hover table-striped" id="Trollphy">
 				<thead>
 					<tr>
@@ -297,7 +312,7 @@
 					@endforeach 
 					
 				</tbody>
-			</table>
+			</table></div>
 
 			<!--   <th>amount</th>
 			     </tr>
@@ -379,6 +394,112 @@
 		<script src="{{ asset('/js/wow.min.js') }}"></script>
 		<!-- Custom Functions -->
 		<script src="{{ asset('/js/main.js') }}"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script>
+		$(document).ready(function () {
+			
+			function exportTableToCSV($table, filename) {
+				
+				var $rows = $table.find('tr:has(td)'),
+					
+					// Temporary delimiter characters unlikely to be typed by keyboard
+            // This is to avoid accidentally splitting the actual contents
+				tmpColDelim = String.fromCharCode(11), // vertical tab character
+					tmpRowDelim = String.fromCharCode(0), // null character
+					
+					// actual delimiter characters for CSV format
+				colDelim = '","',
+					rowDelim = '"\r\n"',
+					
+					// Grab text from table into CSV formatted string
+				csv = '"' + $rows.map(function (i, row) {
+					var $row = $(row),
+						$cols = $row.find('td');
+					
+					return $cols.map(function (j, col) {
+						var $col = $(col),
+							text = $col.text();
+						
+						return text.replace(/"/g, '""'); // escape double quotes
+						
+					}).get().join(tmpColDelim);
+					
+				}).get().join(tmpRowDelim)
+					.split(tmpRowDelim).join(rowDelim)
+					.split(tmpColDelim).join(colDelim) + '"',
+					
+					// Data URI
+				csvData = 'data:application/csv;charset=utf-8,' + encodeURIComponent(csv);
+				
+				$(this)
+					.attr({
+						'download': filename,
+						'href': csvData,
+						'target': '_blank'
+					});
+			}
+			
+			// This must be a hyperlink
+			$(".export").on('click', function (event) {
+				// CSV
+				exportTableToCSV.apply(this, [$('#dvData>table'), 'grab2smash.csv']);
+				
+				// IF CSV, don't do event.preventDefault() or return false
+				// We actually need this to be a typical hyperlink
+			});
+			$(".export2").on('click', function (event) {
+				// CSV
+				exportTableToCSV.apply(this, [$('#dvData2>table'), 'PDC.csv']);
+				
+				// IF CSV, don't do event.preventDefault() or return false
+				// We actually need this to be a typical hyperlink
+			});
+			$(".export3").on('click', function (event) {
+				// CSV
+				exportTableToCSV.apply(this, [$('#dvData3>table'), 'YACO.csv']);
+				
+				// IF CSV, don't do event.preventDefault() or return false
+				// We actually need this to be a typical hyperlink
+			});
+			$(".export4").on('click', function (event) {
+				// CSV
+				exportTableToCSV.apply(this, [$('#dvData4>table'), 'ELECTROLUTION.csv']);
+				
+				// IF CSV, don't do event.preventDefault() or return false
+				// We actually need this to be a typical hyperlink
+			});
+			$(".export5").on('click', function (event) {
+				// CSV
+				exportTableToCSV.apply(this, [$('#dvData5>table'), 'bytecode.csv']);
+				
+				// IF CSV, don't do event.preventDefault() or return false
+				// We actually need this to be a typical hyperlink
+			});
+			$(".export6").on('click', function (event) {
+				// CSV
+				exportTableToCSV.apply(this, [$('#dvData6>table'), 'TUM.csv']);
+				
+				// IF CSV, don't do event.preventDefault() or return false
+				// We actually need this to be a typical hyperlink
+			});
+			$(".export7").on('click', function (event) {
+				// CSV
+				exportTableToCSV.apply(this, [$('#dvData7>table'), 'Waterrocket.csv']);
+				
+				// IF CSV, don't do event.preventDefault() or return false
+				// We actually need this to be a typical hyperlink
+			});
+			$(".export8").on('click', function (event) {
+				// CSV
+				exportTableToCSV.apply(this, [$('#dvData8>table'), 'trollphy.csv']);
+				
+				// IF CSV, don't do event.preventDefault() or return false
+				// We actually need this to be a typical hyperlink
+			});
+
+		});
+		</script>
 	</body>
 </html>
 

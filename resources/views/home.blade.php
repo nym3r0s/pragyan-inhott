@@ -290,7 +290,7 @@ This tournament consists of a splash of every flavour of Pragyan. Events are des
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
 							<div class="service-item">
 								<div class="service-icon">
-									<a href="{{asset('/pdfs/1.pdf')}}" target="_blank"><i class="fa fa-android fa-3x"></i></a>
+									<a href="{{asset('/pdfs/3.pdf')}}" target="_blank"><i class="fa fa-android fa-3x"></i></a>
 								</div>
 								<h3>Grab To Smash</h3>
 								<p>Gain access to smash your opponents by grabbing your powers.</p>
@@ -313,7 +313,7 @@ be amazed at what you are capable of</p>
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.6s">
 							<div class="service-item">
 								<div class="service-icon">
-								<a href="{{asset('/pdfs/3.pdf')}}" target="_blank">
+								<a href="{{asset('/pdfs/4.pdf')}}" target="_blank">
 									<i class="fa fa-cube fa-3x"></i></a>
 								</div>
 								<h4>Pragyan Design Challenge</h4>
@@ -325,7 +325,7 @@ the given problem statement and present it by a drawing/ sketchup/ 3D Modelling 
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
 							<div class="service-item">
 								<div class="service-icon">
-								<a href="{{asset('/pdfs/4.pdf')}}" target="_blank">
+								<a href="{{asset('/pdfs/8.pdf')}}" target="_blank">
 									<i class="fa fa-heart fa-3x"></i></a>
 								</div>
 								
@@ -343,7 +343,7 @@ college using Existing Technologies which are feasible at the same time. </p>
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn">
 							<div class="service-item">
 								<div class="service-icon">
-								<a href="{{asset('/pdfs/5.pdf')}}" target="_blank">	<i class="fa fa-code fa-3x"></i>
+								<a href="{{asset('/pdfs/1.pdf')}}" target="_blank">	<i class="fa fa-code fa-3x"></i>
 								</a></div>
 								<h3>Bytecode junior</h3>
 								<p>ByteCode Junior is an online algorithm programming conte
@@ -355,7 +355,7 @@ Structures. </p>
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.3s">
 							<div class="service-item">
 								<div class="service-icon">
-								<a href="{{asset('/pdfs/6.pdf')}}" target="_blank">	<i class="fa fa-users fa-3x"></i>
+								<a href="{{asset('/pdfs/5.pdf')}}" target="_blank">	<i class="fa fa-users fa-3x"></i>
 								</a></div>
 								<h3>The Ultimate Manager</h3>
 								<p>A fun filled, creative and challenging event, where we wil
@@ -378,7 +378,7 @@ eneral awareness. </p>
 						<div class="col-md-3 col-sm-6 col-xs-12 text-center wow animated zoomIn" data-wow-delay="0.9s">
 							<div class="service-item">
 								<div class="service-icon">
-								<a href="{{asset('/pdfs/8.pdf')}}" target="_blank">
+								<a href="{{asset('/pdfs/6.pdf')}}" target="_blank">
 									<i class="fa fa-smile-o fa-3x"></i></a>
 								</div>
 								
